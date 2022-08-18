@@ -5,20 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EncabezadoComponent } from './componentes/encabezado/encabezado.component';
 import { AcercaDeComponent } from './componentes/acerca-de/acerca-de.component';
-import { ExperienciaYeducacionComponent } from './componentes/experiencia-yeducacion/experiencia-yeducacion.component';
 import { AptitudesComponent } from './componentes/aptitudes/aptitudes.component';
 import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
 import { LogrosComponent } from './componentes/logros/logros.component';
+import { EducacionYExperienciaComponent } from './componentes/educacion-yexperiencia/educacion-yexperiencia.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EncabezadoComponent,
     AcercaDeComponent,
-    ExperienciaYeducacionComponent,
     AptitudesComponent,
     IniciarSesionComponent,
-    LogrosComponent
+    LogrosComponent,
+    EducacionYExperienciaComponent
   ],
   imports: [
     BrowserModule,
