@@ -1,2 +1,0 @@
-# ProyectoIntegrador_CologneErika
- 
