@@ -8,6 +8,8 @@ import { AcercaDeComponent } from './componentes/acerca-de/acerca-de.component';
 import { AptitudesComponent } from './componentes/aptitudes/aptitudes.component';
 import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
 import { LogrosComponent } from './componentes/logros/logros.component';
+import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
+import { EducacionComponent } from './componentes/educacion/educacion.component';
 
 
 @NgModule({
@@ -18,6 +20,8 @@ import { LogrosComponent } from './componentes/logros/logros.component';
     AptitudesComponent,
     IniciarSesionComponent,
     LogrosComponent,
+    ExperienciaComponent,
+    EducacionComponent,
   ],
   imports: [
     BrowserModule,
