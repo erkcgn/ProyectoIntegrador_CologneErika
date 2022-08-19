@@ -8,7 +8,7 @@ import { AcercaDeComponent } from './componentes/acerca-de/acerca-de.component';
 import { AptitudesComponent } from './componentes/aptitudes/aptitudes.component';
 import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
 import { LogrosComponent } from './componentes/logros/logros.component';
-import { EducacionYExperienciaComponent } from './componentes/educacion-yexperiencia/educacion-yexperiencia.component';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +18,6 @@ import { EducacionYExperienciaComponent } from './componentes/educacion-yexperie
     AptitudesComponent,
     IniciarSesionComponent,
     LogrosComponent,
-    EducacionYExperienciaComponent
   ],
   imports: [
     BrowserModule,
