@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+/* Base class */
+.bd-callout {
+    padding: 1.25rem;
+    border: 1px solid #e9ecef;
+    border-left-width: 0.25rem;
+    border-radius: 0.25rem;
+}
+
+/* Modifier classes */
+.bd-callout-blue {
+    border-left-color: #765af5;
+}
+.bd-callout-warning {
+    border-left-color: #f0ad4e;
+}
+.bd-callout-danger {
+    border-left-color: #d9534f;
+}
+.bd-callout-violet {
+    border-left-color: rgb(184, 87, 184);
+}
+.bd-callout-greenlight {
+    border-left-color: rgb(126, 230, 105);
+}
