@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { NgCircleProgressModule } from 'ng-circle-progress';
 @Component({
   selector: 'app-aptitudes',
   templateUrl: './aptitudes.component.html',
@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AptitudesComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    
+  ) { }
 
   ngOnInit(): void {
   }
