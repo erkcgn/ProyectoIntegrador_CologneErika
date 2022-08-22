@@ -12,4 +12,8 @@ export class LogrosComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
+  
+
 }
+
