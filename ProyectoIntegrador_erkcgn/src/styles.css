@@ -1,4 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    width: 100vw;
+    overflow-x: hidden;
+}
+
 /* Base class */
 .bd-callout {
     padding: 1.25rem;
