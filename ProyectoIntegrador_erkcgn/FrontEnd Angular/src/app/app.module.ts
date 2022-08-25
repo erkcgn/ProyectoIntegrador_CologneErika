@@ -11,6 +11,7 @@ import { ExperienciaComponent } from './componentes/experiencia/experiencia.comp
 import { EducacionComponent } from './componentes/educacion/educacion.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { FooterComponent } from './componentes/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { FooterComponent } from './componentes/footer/footer.component';
       innerStrokeColor: "#C7E596",
       animationDuration: 300,
     }),
+    HttpClientModule,
     AppRoutingModule,
     
   ],
