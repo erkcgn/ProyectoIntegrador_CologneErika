@@ -12,6 +12,8 @@ import { EducacionComponent } from './componentes/educacion/educacion.component'
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -37,6 +39,7 @@ import { HttpClientModule } from '@angular/common/http';
       animationDuration: 300,
     }),
     HttpClientModule,
+    FormsModule,
     AppRoutingModule,
     
   ],
