@@ -4,6 +4,7 @@ import { LoginUsuario } from 'src/app/model/login-usuario';
 import { AuthService } from 'src/app/service/auth.service';
 import { TokenService } from 'src/app/service/token.service';
 
+
 @Component({
   selector: 'app-iniciar-sesion',
   templateUrl: './iniciar-sesion.component.html',
@@ -42,7 +43,7 @@ export class IniciarSesionComponent implements OnInit {
           this.tokenService.setUserName(data.nombreUsuario);
           this.tokenService.setAuthorities(data.authorities);
           this.roles = data.authorities;
-          this.router.navigate(['/'])
+          this.router.navigate(['/']);
         }, err => {
           this.isLogged = false;
           this.isLogginFail = true;
