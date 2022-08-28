@@ -13,6 +13,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { NewExperienciaComponent } from './componentes/experiencia/new-experiencia.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { FormsModule } from '@angular/forms';
     ExperienciaComponent,
     EducacionComponent,
     FooterComponent,
+    NewExperienciaComponent,
   ],
   imports: [
     BrowserModule,
