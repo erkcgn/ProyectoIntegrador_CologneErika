@@ -1,130 +1,155 @@
 <section class="container" class="bg-info bg-opacity-10">
     <section class="container py-2">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-sm-4 col-md-6 col-lg-8">
                 <h2>
                     Experiencia Laboral
-                </h2>
+                </h2>                
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end" class="col-lg-4">
+                <button type="button" class="btn btn-dark btn-sm" routerLink="/nuevaexp" *ngIf="isLogged">
+                    Agregar Experiencia
+                </button>
             </div>
         </div>
     </section>
-    <section class="container-fluid py-2 px-5">
-        <div class="row mb-4">
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-header">
-                            Evoltis Contac Center & BPO.
-                            <h5>
-                                2011-2022
-                            </h5>
-                        </h4>
-                        <br>
-                        <p class="card-text">
-                            Contacto directo con Clientes y Gestión de equipos en proceso de ventas;
-                            monitoreando el desempeño y acompañando con herramientas pertinentes para el
-                            cumplimiento de los diferentes KPIs requeridos, proyectando el logro de los mismos.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-header">
-                            Estudio Contable Torres.
-
-                            <h5>
-                                2009-2009
-                            </h5>
-                        </h4>
-                        <br>
-                        <p class="card-text">
-                            Tareas de Auxiliar.
+    <section class="container py-2 px-5">
+        <div class="row" class="table-responsive">    
+            <table class="">
+                <tbody>
+                    <tr *ngFor="let Experiencia of expe">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <td>
+                                        <h4 class="col-sm-4 col-md-6 col-lg-8" class="card-header">
+                                            {{Experiencia.nombreE}}
+                                        </h4>
+                                    </td>
+                                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                        <td *ngIf="isLogged">
+                                            <button class="btn" routerLink="/editexp/{{Experiencia.id}}">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                        </td>
+                                        <td *ngIf="isLogged">
+                                            <button class="btn" (click)="eliminar(Experiencia.id)">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <td>
+                                        <p class="card-text">
+                                            {{Experiencia.descripcionE}}
+                                        </p>
+                                    </td>
+                                </div>                                
+                            </div>
+                        </div>
+                    </tr>
+                </tbody>
+            </table>
+    
+            <!-- <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-header">
+                                Estudio Contable Torres.
+    
+                                <h5>
+                                    2009-2009
+                                </h5>
+                            </h4>
                             <br>
-                            Back-up de datos.
-                        </p>
+                            <p class="card-text">
+                                Tareas de Auxiliar.
+                                <br>
+                                Back-up de datos.
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-header">
-                            Millenium Bienes Raíces - CRI.
-
-                            <h5>
-                                2008-2008
-                            </h5>
-                        </h4>
-                        <br>
-                        <p class="card-text">
-                            Secretaria – Recepcionista
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-header">
+                                Millenium Bienes Raíces - CRI.
+    
+                                <h5>
+                                    2008-2008
+                                </h5>
+                            </h4>
                             <br>
-                            Tareas Administrativas.
-                            Data entry
-                        </p>
+                            <p class="card-text">
+                                Secretaria – Recepcionista
+                                <br>
+                                Tareas Administrativas.
+                                Data entry
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </div> -->
         </div>
-        <div class="row mb-4">
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card ">
-                    <div class="card-body">
-                        <h4 class="card-header">
-                            Work Group S.R.L.
-                            <h5>
-                                2007-2008.
-                            </h5>
-                        </h4>
-                        <br>
-                        <p class="card-text">
-                            Administración Encargada de personal, realizar la liquidación.
-                            Carga de ventas de los grupos de telemarketers.
-                            Comunicación de planes estrategicos para mejorar la calidad en el equipo de trabajo.
-                        </p>
+        <!-- <div class="row mb-4">
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card ">
+                        <div class="card-body">
+                            <h4 class="card-header">
+                                Work Group S.R.L.
+                                <h5>
+                                    2007-2008.
+                                </h5>
+                            </h4>
+                            <br>
+                            <p class="card-text">
+                                Administración Encargada de personal, realizar la liquidación.
+                                Carga de ventas de los grupos de telemarketers.
+                                Comunicación de planes estrategicos para mejorar la calidad en el equipo de trabajo.
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card ">
-                    <div class="card-body">
-                        <h4 class="card-header">
-                            CCS Argentina.
-                            <h5>
-                                2005-2006.
-                            </h5>
-                        </h4>
-                        <br>
-                        <p class="card-text">
-                            Representante de ventas senior
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card ">
+                        <div class="card-body">
+                            <h4 class="card-header">
+                                CCS Argentina.
+                                <h5>
+                                    2005-2006.
+                                </h5>
+                            </h4>
                             <br>
-                            Ventas telefónicas de ADSL a España.
-                        </p>
+                            <p class="card-text">
+                                Representante de ventas senior
+                                <br>
+                                Ventas telefónicas de ADSL a España.
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card ">
-                    <div class="card-body">
-                        <h4 class="card-header">
-                            Ian Satelital S.A.
-                            <h5>
-                                2004-2005.
-                            </h5>
-                        </h4>
-                        <br>
-                        <p class="card-text">
-                            Atención al Cliente
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card ">
+                        <div class="card-body">
+                            <h4 class="card-header">
+                                Ian Satelital S.A.
+                                <h5>
+                                    2004-2005.
+                                </h5>
+                            </h4>
                             <br>
-                            Recepción y envió de mensajes.
-                            <br>
-                            Gestión de eventos de Alarmas.
-                        </p>
+                            <p class="card-text">
+                                Atención al Cliente
+                                <br>
+                                Recepción y envió de mensajes.
+                                <br>
+                                Gestión de eventos de Alarmas.
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div> -->
     </section>
 </section>
