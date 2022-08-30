@@ -1,4 +1,62 @@
-<section class="container-fluid ">    
+<section class="container py-2">
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4 col-md-6 col-lg-8">
+                <h2>
+                    Formación Académica
+                </h2>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end" class="col-lg-4">
+                <button type="button" class="btn btn-dark btn-sm" routerLink="/nuevaedu" *ngIf="isLogged">
+                    Agregar Educación
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="container py-2 px-5">
+        <div class="row" class="table-responsive">
+            <table class="">
+                <tbody>
+                    <tr *ngFor="let Educacion of educacion">
+                        <div class="container col-md-8 mb-3">
+                            <div class="row" class="bd-callout bd-callout-warning">
+                                <td>
+                                    <h4 class="col-sm-4 col-md-6 col-lg-8" class="card-header">
+                                        {{Educacion.nombreE}}
+                                    </h4>
+                                </td>
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <td *ngIf="isLogged">
+                                        <button class="btn" routerLink="/editedu/{{Educacion.id}}">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                    </td>
+                                    <td *ngIf="isLogged">
+                                        <button class="btn" (click)="borrar(Educacion.id)">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </div>
+                            </div>
+                            <div class="row" class="bd-callout ">
+                                <td>
+                                    <p class="">
+                                        {{Educacion.descripcionE}}
+                                    </p>
+                                </td>
+                            </div>
+                        </div>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</section>
+
+
+
+
+<!-- <section class="container-fluid ">    
     <section class="container py-2">
         <div class="row">
             <div class="">
@@ -62,7 +120,7 @@
                             </li>
                             <li>
                                 <strong>2018:</strong><br>
-                                Workshop - Liderazgo conciente e integración emocional / CFP.
+                                Workshop - Liderazgo consiente e integración emocional / CFP.
                                 <br>
                                 Inteligencia Emocional / CFP.
                                 <br>
@@ -85,4 +143,4 @@
         </div>
     </section>
 </section>
-</section>
+</section> -->
