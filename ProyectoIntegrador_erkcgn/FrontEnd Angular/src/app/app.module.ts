@@ -20,6 +20,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NewlogroComponent } from './componentes/logros/newlogro.component';
 import { EditlogroComponent } from './componentes/logros/editlogro.component';
+import { HomeRutasComponent } from './componentes/home-rutas/home-rutas.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { EditlogroComponent } from './componentes/logros/editlogro.component';
     EditeducacionComponent,
     NewlogroComponent,
     EditlogroComponent,
+    HomeRutasComponent,
   ],
   imports: [
     BrowserModule,
