@@ -1,41 +1,68 @@
 <section class="container-fluid bg-success bg-opacity-50 mb-2">
     <div class="container py-2">
         <div class="row">
-            <h2>Proyectos realizados</h2>
+            <h2>
+                Proyectos realizados
+            </h2>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end" class="col-lg-4">
+                <button type="button" class="btn btn-dark btn-sm" routerLink="/nuevaexp" *ngIf="isLogged">
+                    Agregar Proyecto
+                </button>
+            </div>            
         </div>
     </div>
-    <div class="container bg-primary bg-opacity-75 mb-2">
+    <div class="container bg-primary bg-opacity-75 mb-4">
         <div class="row">
             <div class="mb-4 text-center">
-                <h3 class="text-center text-light py-2">
-                    Mi Portfolio Web
-                </h3>
-                <p class="text-light">
-                    Este proyecto lo comence el 18 de Agosto del 2022, el contenido del mismo se conforma con base a lo
-                    requerido
-                    en la Guía del <a href="#" target="_blank" data-bs-toggle="tooltip" data-bs-title="Default tooltip"
-                        class="link-light">Proyecto Integrador</a>. Buscando que la UI sea atractiva e innovadora y la
-                    UX completamente funcional.
-                </p>
-                <div class="row">
-                    <div class="col-sm-4 col-md-4 col-lg-4 py-2">
-                        <img src="../../../assets/img/proyectos/imagenPortfolio.PNG" class="img-fluid mx-auto"
-                            width="300" height="300" alt="imagen Portfolio">
-                    </div>
-                    <div class="col-sm-4 col-md-4 col-lg-4 py-2">
-                        <img src="../../../assets/img/proyectos/imagenPortfolio2.PNG" class="img-fluid mx-auto"
-                            width="300" height="300" alt="imagen Portfolio 2">
-                    </div>
-                    <div class="col-sm-4 col-md-4 col-lg-4 py-2">
-                        <img src="../../../assets/img/proyectos/imagenPortfolio3.PNG" class="img-fluid mx-auto"
-                            width="300" height="300" alt="imagen Portfolio 3">
-                    </div>
-                </div>
+                <table class="table">
+                    <tbody>
+                        <tr *ngFor="let Proyecto of proyecto">
+                            <td>
+                                <div class="row">
+                                    <h3 class="text-center text-light py-2">
+                                        {{Proyecto.nombreP}}
+                                    </h3>
+                                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                        <td *ngIf="isLogged">
+                                            <button class="btn" routerLink="/editexp/{{Proyecto.id}}">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                        </td>
+                                        <td *ngIf="isLogged">
+                                            <button class="btn" (click)="borrar(Proyecto.id)">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="text-light">
+                                    {{Proyecto.descripcionP}}
+                                </p>
+                            </td>
+                            <div class="row">
+                                <div class="col-sm-4 col-md-4 col-lg-4 py-2">
+                                    <img src="../../../assets/img/proyectos/imagenPortfolio.PNG" class="img-fluid mx-auto"
+                                        width="300" height="300" alt="imagen Portfolio">
+                                </div>
+                                <div class="col-sm-4 col-md-4 col-lg-4 py-2">
+                                    <img src="../../../assets/img/proyectos/imagenPortfolio2.PNG" class="img-fluid mx-auto"
+                                        width="300" height="300" alt="imagen Portfolio 2">
+                                </div>
+                                <div class="col-sm-4 col-md-4 col-lg-4 py-2">
+                                    <img src="../../../assets/img/proyectos/imagenPortfolio3.PNG" class="img-fluid mx-auto"
+                                        width="300" height="300" alt="imagen Portfolio 3">
+                                </div>
+                            </div>
+                        </tr>
+                    </tbody>
+                </table>                
             </div>
         </div>
     </div>
 
-    <div class="container bg-primary bg-opacity-50 mb-2">
+    <!-- <div class="container bg-primary bg-opacity-50 mb-2">
         <div class="row">
             <div class="mb-4 text-center">
                 <h3 class="text-center text-light py-2">
@@ -167,5 +194,20 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </section>
+
+<!-- <td>
+    <h3 class="text-center text-light py-2">
+        Mi Portfolio Web
+    </h3>
+</td>
+<td>
+    <p class="text-light">
+        Este proyecto lo comence el 18 de Agosto del 2022, el contenido del mismo se conforma con base a lo
+        requerido
+        en la Guía del <a href="#" target="_blank" data-bs-toggle="tooltip" data-bs-title="Default tooltip"
+            class="link-light">Proyecto Integrador</a>. Buscando que la UI sea atractiva e innovadora y la
+        UX completamente funcional.
+    </p>
+</td> -->
