@@ -1,5 +1,4 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EncabezadoComponent } from './componentes/encabezado/encabezado.component';
@@ -17,6 +16,8 @@ import { NewExperienciaComponent } from './componentes/experiencia/new-experienc
 import { EditExperienciaComponent } from './componentes/experiencia/edit-experiencia.component';
 import { NeweducacionComponent } from './componentes/educacion/neweducacion.component';
 import { EditeducacionComponent } from './componentes/educacion/editeducacion.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
 
 @NgModule({
@@ -40,8 +41,7 @@ import { EditeducacionComponent } from './componentes/educacion/editeducacion.co
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
     FormsModule,
-    AppRoutingModule,
-    
+    AppRoutingModule,    
   ],
   providers: [],
   bootstrap: [AppComponent]

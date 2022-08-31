@@ -15,11 +15,11 @@ import { TokenService } from 'src/app/service/token.service';
 export class IniciarSesionComponent implements OnInit {
   isLogged = false;
   isLogginFail = false;
-  loginUsuario!: LoginUsuario;
-  nombreUsuario!: string;
-  password!: string;
+  loginUsuario: LoginUsuario;
+  nombreUsuario: string;
+  password: string;
   roles: string[] = [];
-  errMsj!: string;
+  errMsj: string;
 
   constructor(private tokenService: TokenService,
               private authService: AuthService,
