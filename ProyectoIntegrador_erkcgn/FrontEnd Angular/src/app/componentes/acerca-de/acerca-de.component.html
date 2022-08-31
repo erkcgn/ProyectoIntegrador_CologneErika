@@ -4,25 +4,33 @@
 </section>
 <section class="container marketing">
     <div class="row featurette">
-        <div class="col-md-7 order-md-2">
-            <h1 class="featurette-heading">
-                {{persona.nombre}} {{persona.apellido}}
-                <span class="text-muted">
-                    <br>                    
-                    Full Stack Developer Jr.
-                </span>
-            </h1>
-            <p class="lead">
-                <br>
-                Me encuentro actualmente cursando la Tecnicatura en Desarrollo web y
-                Aplicaciones Digitales en el Instituto Superior Politécnico Córdobna - ISPC;
-                tambien una capacitacion Full Stack Java Developer en EGG y realizando capacitaciones de manera
-                autodidacta.
-            </p>
-        </div>
-        <div class="col-md-5 order-md-1">            
-            <img src="../../../assets/img/erika.PNG" class="rounded-circle bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-            width="250" height="250" alt="">
+        <div  class="col-md-7 order-md-2">
+            <table *ngFor="let Persona">
+                <tbody>
+                    <tr>
+                        <td>
+                        <h1 class="featurette-heading">
+                            {{Persona.nombre}} {{Persona.apellido}}
+                            <span class="text-muted">                                
+                                {{Persona.titulo}}
+                            </span>
+                        </h1>
+                    </td>
+                    <td>
+                        <p class="lead">
+                            {{Persona.descripcion}}
+                        </p>
+                    </td>
+                    <td>
+                        <div class="col-md-5 order-md-1">
+                            <img {{Persona.img}}
+                                class="rounded-circle bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                                width="250" height="250" alt="">
+                        </div>
+                    </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 

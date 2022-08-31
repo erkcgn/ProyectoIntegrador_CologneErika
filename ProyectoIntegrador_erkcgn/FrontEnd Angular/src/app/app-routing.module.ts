@@ -11,7 +11,9 @@ import { EditExperienciaComponent } from './componentes/experiencia/edit-experie
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
 import { NewExperienciaComponent } from './componentes/experiencia/new-experiencia.component';
 import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
+import { EditlogroComponent } from './componentes/logros/editlogro.component';
 import { LogrosComponent } from './componentes/logros/logros.component';
+import { NewlogroComponent } from './componentes/logros/newlogro.component';
 
 const routes: Routes = [
   {path: '', component: EncabezadoComponent},
@@ -26,6 +28,8 @@ const routes: Routes = [
   {path: 'aptitudes', component: AptitudesComponent},
   {path: 'aptitudes', component: AptitudesComponent},
   {path: 'logros', component: LogrosComponent},
+  {path: 'newlogro', component: NewlogroComponent},
+  {path: 'editlogro/:id', component: EditlogroComponent},
   
 ];
 

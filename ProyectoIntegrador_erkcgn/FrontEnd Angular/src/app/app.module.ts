@@ -18,6 +18,8 @@ import { NeweducacionComponent } from './componentes/educacion/neweducacion.comp
 import { EditeducacionComponent } from './componentes/educacion/editeducacion.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NewlogroComponent } from './componentes/logros/newlogro.component';
+import { EditlogroComponent } from './componentes/logros/editlogro.component';
 
 
 @NgModule({
@@ -35,6 +37,8 @@ import { NgModule } from '@angular/core';
     EditExperienciaComponent,
     NeweducacionComponent,
     EditeducacionComponent,
+    NewlogroComponent,
+    EditlogroComponent,
   ],
   imports: [
     BrowserModule,

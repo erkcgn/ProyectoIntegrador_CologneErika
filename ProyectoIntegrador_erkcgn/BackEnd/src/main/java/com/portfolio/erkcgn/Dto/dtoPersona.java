@@ -1,39 +1,30 @@
-package com.portfolio.erkcgn.Entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+package com.portfolio.erkcgn.Dto;
+
+import javax.validation.constraints.NotBlank;
 
 
-@Entity
-public class Persona {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+public class dtoPersona {
+    @NotBlank
     private String nombre;
+    @NotBlank
     private String apellido;
+    @NotBlank
     private String titulo;
+    @NotBlank
     private String descripcion;
+    @NotBlank
     private String imgPerfil;
 
-    public Persona() {
+    public dtoPersona() {
     }
 
-    public Persona(String nombre, String apellido, String titulo, String descripcion, String imgPerfil) {
+    public dtoPersona(String nombre, String apellido, String titulo, String descripcion, String imgPerfil) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.imgPerfil = imgPerfil;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getNombre() {
@@ -75,8 +66,6 @@ public class Persona {
     public void setImgPerfil(String imgPerfil) {
         this.imgPerfil = imgPerfil;
     }
-
     
-
     
 }
