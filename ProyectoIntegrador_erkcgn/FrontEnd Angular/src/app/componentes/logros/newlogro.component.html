@@ -1,18 +1,20 @@
-<section>
-    <div class="container">
-        <div class="row">
-            <div>
-                <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-                    <div class="form-group">
-                        <label for="nombreE">Nombre del Proyecto :</label>
-                        <input type="text" class="form-control" id="nombreL" name="nombreL" [(ngModel)]="nombreP" required>                    
-                    </div>
-                    <div class="form-group">
-                        <label for="descripcionE">Descripcion del Proyecto :</label>
-                        <textarea type="text" class="form-control" id="descripcionL" name="descripcionL" [(ngModel)]="descripcionP" required></textarea>                   
-                    </div>
-                    <button class="btn btn-warning">Agregar Proyecto</button>
-                </form>
+<section class="container mb-5 py-5">
+    <div class="container-fluid bg-primary">
+        <div class="container-fluid mb-2 py-5">
+            <div class="row" class="col-sm-4 col-md-6 col-lg-12 mb-3">
+                <div>
+                    <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                        <div class="form-group mb-4 py-2 text-white">
+                            <label for="nombreE" class="mb-3">Nombre del Proyecto :</label>
+                            <input type="text" class="form-control" id="nombreL" name="nombreL" [(ngModel)]="nombreP" required>                    
+                        </div>
+                        <div class="form-group mb-4 text-white">
+                            <label for="descripcionE" class="mb-3">Descripcion del Proyecto :</label>
+                            <textarea type="text" class="form-control" id="descripcionL" name="descripcionL" [(ngModel)]="descripcionP" required></textarea>                   
+                        </div>
+                        <button class="btn btn-dark">Agregar Proyecto</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
