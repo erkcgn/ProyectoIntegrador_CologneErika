@@ -10,7 +10,7 @@ import { TokenService } from 'src/app/service/token.service';
 })
 
 export class AcercaDeComponent implements OnInit {
-  persona: Persona = new Persona ("","","","","");
+  persona = new Persona ("","","","","");
 
   constructor(public personaService: PersonaService,
               private tokenService: TokenService) { }

@@ -21,17 +21,17 @@ export class EditlogroComponent implements OnInit {
       this.proyecto = data;
     }, err => {
       alert("Error al modificar");
-      this.router.navigate(['']);
+      this.router.navigate(['/']);
     });
   }
 
   onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     this.proyectoS.update(id, this.proyecto).subscribe(data => {
-      this.router.navigate(['']);
+      this.router.navigate(['/']);
     }, err => {
       alert("Error al modificar Proyecto");
-      this.router.navigate(['']);
+      this.router.navigate(['/']);
     });
   }
 

@@ -23,10 +23,10 @@ export class NewlogroComponent implements OnInit {
     const proyecto = new Proyecto(this.nombreP, this.descripcionP);
     this.proyectoS.save(proyecto).subscribe(data => {
       alert("Proyecto añadido correctamente");
-      this.router.navigate(['']);
+      this.router.navigate(['/']);
     }, err =>{
       alert("Falló");
-      this.router.navigate(['']);
+      this.router.navigate(['/']);
     });
   }
 

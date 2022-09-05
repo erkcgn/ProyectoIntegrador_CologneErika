@@ -21,17 +21,17 @@ export class EditExperienciaComponent implements OnInit {
       this.expLab = data;
     }, err => {
       alert("Error al modificar experiencia laboral");
-      this.router.navigate(['']);
+      this.router.navigate(['/']);
     });
   }
 
   onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     this.sExperiencia.update(id, this.expLab).subscribe(data => {
-      this.router.navigate(['']);
+      this.router.navigate(['/']);
     }, err => {
       alert("Error al modificar experiencia laboral");
-      this.router.navigate(['']);
+      this.router.navigate(['/']);
     });
   }
 
