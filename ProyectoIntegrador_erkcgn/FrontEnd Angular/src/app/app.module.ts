@@ -21,6 +21,13 @@ import { NgModule } from '@angular/core';
 import { NewlogroComponent } from './componentes/logros/newlogro.component';
 import { EditlogroComponent } from './componentes/logros/editlogro.component';
 import { HomeRutasComponent } from './componentes/home-rutas/home-rutas.component';
+import { PersonaService } from './service/persona.service';
+import { TokenService } from './service/token.service';
+import { AuthService } from './service/auth.service';
+import { ProyectoService } from './service/proyecto.service';
+import { EducacionService } from './service/educacion.service';
+import { InterceptorService } from './service/interceptor-service';
+import { SExperienciaService } from './service/experiencia.service';
 
 
 @NgModule({
@@ -49,7 +56,15 @@ import { HomeRutasComponent } from './componentes/home-rutas/home-rutas.componen
     FormsModule,
     AppRoutingModule,    
   ],
-  providers: [],
+  providers: [
+    PersonaService, 
+    TokenService, 
+    AuthService, 
+    ProyectoService, 
+    EducacionService, 
+    InterceptorService,
+    SExperienciaService,
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
