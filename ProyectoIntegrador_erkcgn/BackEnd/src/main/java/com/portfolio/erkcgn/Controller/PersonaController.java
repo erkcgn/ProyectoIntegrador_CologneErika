@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/persona")
-@CrossOrigin(origins = "https://portfolioerkcgn.web.app")
+@CrossOrigin(origins = "http://localhost:4200")
 
 public class PersonaController {
     @Autowired
@@ -46,7 +46,7 @@ public class PersonaController {
         return new ResponseEntity(persona, HttpStatus.OK);
     }
     
-    @PreAuthorize("hasRole('ADMIN')")
+    //@PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") int id){
         if(!sPersona.existsById(id)){
@@ -57,7 +57,7 @@ public class PersonaController {
         return new ResponseEntity(new Mensaje("Persona eliminada"), HttpStatus.OK);
     }
     
-    @PreAuthorize("hasRole('ADMIN')")
+    //@PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody dtoPersona dtopersona){
         if(StringUtils.isBlank(dtopersona.getNombre())){
@@ -71,7 +71,7 @@ public class PersonaController {
         return new ResponseEntity(new Mensaje("Persona creada"), HttpStatus.OK);
     }
     
-    @PreAuthorize("hasRole('ADMIN')")
+    //@PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id")int id, @RequestBody dtoPersona dtopersona){
         if(!sPersona.existsById(id)){
@@ -96,10 +96,9 @@ public class PersonaController {
         return new ResponseEntity(new Mensaje("Persona actulizada"), HttpStatus.OK);
     }
     
-//    @GetMapping("/traer/perfil")
-//    public Persona getPersona() {
-//        return sPersona.getPersona((int)1);
-//    }
-//    
-//    //return sPersona.findPersona((long)1)
+    @GetMapping("/traer/perfil")
+    public Persona findPersona(int id) {
+        return sPersona.findPersona((int)1);
+    }
+
 }

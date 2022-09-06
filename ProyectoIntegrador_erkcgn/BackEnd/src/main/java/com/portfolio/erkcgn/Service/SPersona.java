@@ -42,4 +42,9 @@ public class SPersona {
     public boolean existsByNombre(String nombre){
         return rPersona.existsByNombre(nombre);
     }
+
+    public Persona findPersona(int id) {
+        Persona persona = rPersona.findById(id).orElse(null);
+        return persona;
+    }   
 }
