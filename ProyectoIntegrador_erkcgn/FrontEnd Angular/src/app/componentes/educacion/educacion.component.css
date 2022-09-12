@@ -1,0 +1,10 @@
+.hero {
+    background-image: url(../../../assets/img/fondo-educacion.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+        
+}
+.contenido-hero {    
+    background-color: rgba(0 0 0 / 70%);
+}
