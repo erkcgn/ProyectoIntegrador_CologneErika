@@ -1,9 +1,11 @@
-<section class="container-fluid bg-success bg-opacity-50 mb-2">
+<section class="container-fluid bg-success bg-opacity-50">
     <div class="container py-2">
         <div class="row">
-            <h2>
-                Proyectos realizados
-            </h2>
+            <div class="col-sm-4 col-md-6 col-lg-8">
+                <h2>
+                    Proyectos realizados
+                </h2>
+            </div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end" class="col-lg-4">
                 <button type="button" class="btn btn-dark btn-sm" routerLink="/newlogro" *ngIf="isLogged">
                     Agregar Proyecto
@@ -17,44 +19,41 @@
                 <table class="table">
                     <tbody>
                         <tr *ngFor="let Proyecto of proyecto">
-                            <td>
+                            
                                 <div class="row">
-                                    <h3 class="text-center text-light py-2">
-                                        {{Proyecto.nombreP}}
-                                    </h3>
-                                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                        <td *ngIf="isLogged">
-                                            <button class="btn" routerLink="/editlogro/{{Proyecto.id}}">
+                                    <div>
+                                        <h3 class="text-center text-light py-2">
+                                            {{Proyecto.nombreP}}
+                                        </h3>
+                                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                            <button *ngIf="isLogged" class="btn" routerLink="/editlogro/{{Proyecto.id}}">
                                                 <i class="fas fa-edit"></i>
                                             </button>
-                                        </td>
-                                        <td *ngIf="isLogged">
-                                            <button class="btn" (click)="borrar(Proyecto.id)">
+                                            <button *ngIf="isLogged" class="btn" (click)="borrar(Proyecto.id)">
                                                 <i class="fas fa-trash"></i>
                                             </button>
-                                        </td>
+                                        </div>
                                     </div>
+                                    <p class="text-light">
+                                        {{Proyecto.descripcionP}}
+                                    </p>
+                                    <div class="row">
+                                        <div class="col-sm-4 col-md-4 col-lg-4 py-2">
+                                            <img src="../../../assets/img/proyectos/imagenPortfolio.PNG" class="img-fluid mx-auto"
+                                                width="300" height="300" alt="imagen Portfolio">
+                                        </div>
+                                        <div class="col-sm-4 col-md-4 col-lg-4 py-2">
+                                            <img src="../../../assets/img/proyectos/imagenPortfolio2.PNG" class="img-fluid mx-auto"
+                                                width="300" height="300" alt="imagen Portfolio 2">
+                                        </div>
+                                        <div class="col-sm-4 col-md-4 col-lg-4 py-2">
+                                            <img src="../../../assets/img/proyectos/imagenPortfolio3.PNG" class="img-fluid mx-auto"
+                                                width="300" height="300" alt="imagen Portfolio 3">
+                                        </div>
+                                    </div>
+                                    
                                 </div>
-                            </td>
-                            <td>
-                                <p class="text-light">
-                                    {{Proyecto.descripcionP}}
-                                </p>
-                            </td>
-                            <div class="row">
-                                <div class="col-sm-4 col-md-4 col-lg-4 py-2">
-                                    <img src="../../../assets/img/proyectos/imagenPortfolio.PNG" class="img-fluid mx-auto"
-                                        width="300" height="300" alt="imagen Portfolio">
-                                </div>
-                                <div class="col-sm-4 col-md-4 col-lg-4 py-2">
-                                    <img src="../../../assets/img/proyectos/imagenPortfolio2.PNG" class="img-fluid mx-auto"
-                                        width="300" height="300" alt="imagen Portfolio 2">
-                                </div>
-                                <div class="col-sm-4 col-md-4 col-lg-4 py-2">
-                                    <img src="../../../assets/img/proyectos/imagenPortfolio3.PNG" class="img-fluid mx-auto"
-                                        width="300" height="300" alt="imagen Portfolio 3">
-                                </div>
-                            </div>
+                                                       
                         </tr>
                     </tbody>
                 </table>                

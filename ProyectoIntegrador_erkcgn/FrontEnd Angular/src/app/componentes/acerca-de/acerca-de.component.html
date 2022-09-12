@@ -1,32 +1,38 @@
-<section class="container marketing mb-2 pt-2">
-    <div class="row featurette">
-        <div  class="col-md-12">
-            <table>
-                <tbody>
-                    <tr>
-                        <td class="col-sm-4 col-md-6 col-lg-4">
-                            <div>
-                                <img [src]="persona.imgPerfil"
-                                    class="rounded-circle bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-                                    width="250" height="250" alt="">
-                            </div>
-                        </td>
-                        <td class="col-sm-4 col-md-6 col-lg-8">
-                            <h1 class="featurette-heading">
-                                {{persona.nombre}} {{persona.apellido}}
-                                <br>
-                                <span class="text-muted">
-                                    {{persona.titulo}}
-                                </span>
-                            </h1>
-                            <p class="lead">
-                                {{persona.descripcion}}
-                            </p>
-                        </td>                    
-                    </tr>
-                </tbody>
-            </table>
+<main>   
+    <section>
+        <div class="row banner">
+            <img src="../../../assets/img/imgProfile.PNG" alt="banner" class="">
         </div>
-    </div>
-
-</section>
+    </section>
+    <section class="container marketing mb-2 pt-2">    
+        <div class="row featurette">
+            <div class="col-md-11">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="col-sm-4 col-md-6 col-lg-4">
+                                <div>
+                                    <img [src]="persona.imgPerfil"
+                                        class="rounded-circle bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                                        width="250" height="250" alt="">
+                                </div>
+                            </td>
+                            <td class="col-sm-4 col-md-6 col-lg-8">
+                                <h1 class="featurette-heading">
+                                    {{persona.nombre}} {{persona.apellido}}
+                                    <br>
+                                    <span class="text-muted">
+                                        {{persona.titulo}}
+                                    </span>
+                                </h1>
+                                <p class="lead">
+                                    {{persona.descripcion}}
+                                </p>
+                            </td>                    
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</main> 
