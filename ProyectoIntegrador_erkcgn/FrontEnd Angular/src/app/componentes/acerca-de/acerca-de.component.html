@@ -1,33 +1,28 @@
-<section>
-    <div class="row py-1">
-    </div>
-</section>
-<section class="container marketing">
+<section class="container marketing mb-2 pt-2">
     <div class="row featurette">
-        <div  class="col-md-7 order-md-2">
-            <table *ngFor="let Persona">
+        <div  class="col-md-12">
+            <table>
                 <tbody>
                     <tr>
-                        <td>
-                        <h1 class="featurette-heading">
-                            {{Persona.nombre}} {{Persona.apellido}}
-                            <span class="text-muted">                                
-                                {{Persona.titulo}}
-                            </span>
-                        </h1>
-                    </td>
-                    <td>
-                        <p class="lead">
-                            {{Persona.descripcion}}
-                        </p>
-                    </td>
-                    <td>
-                        <div class="col-md-5 order-md-1">
-                            <img {{Persona.imgPerfil}}
-                                class="rounded-circle bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-                                width="250" height="250" alt="">
-                        </div>
-                    </td>
+                        <td class="col-sm-4 col-md-6 col-lg-4">
+                            <div>
+                                <img [src]="persona.imgPerfil"
+                                    class="rounded-circle bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                                    width="250" height="250" alt="">
+                            </div>
+                        </td>
+                        <td class="col-sm-4 col-md-6 col-lg-8">
+                            <h1 class="featurette-heading">
+                                {{persona.nombre}} {{persona.apellido}}
+                                <br>
+                                <span class="text-muted">
+                                    {{persona.titulo}}
+                                </span>
+                            </h1>
+                            <p class="lead">
+                                {{persona.descripcion}}
+                            </p>
+                        </td>                    
                     </tr>
                 </tbody>
             </table>

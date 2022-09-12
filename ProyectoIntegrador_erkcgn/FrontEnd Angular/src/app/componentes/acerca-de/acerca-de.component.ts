@@ -10,7 +10,7 @@ import { TokenService } from 'src/app/service/token.service';
 })
 
 export class AcercaDeComponent implements OnInit {
-  persona = new Persona ("","","","","");
+  public persona: Persona = new Persona("","","","","");
 
   constructor(public personaService: PersonaService,
               private tokenService: TokenService) { }
@@ -27,7 +27,10 @@ export class AcercaDeComponent implements OnInit {
   }
 
   cargarPersona(): void {
-    this.personaService.getPersona();
+    this.personaService.lista().subscribe( data => {
+      console.log(typeof data);
+      this.persona = data[0];
+    });
   }
 
   borrar(id: number){
