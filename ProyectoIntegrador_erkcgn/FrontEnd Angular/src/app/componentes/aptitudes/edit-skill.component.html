@@ -1,0 +1,21 @@
+<section class="container mb-5 py-5">
+    <div class="container-fluid bg-primary">
+        <div class="container-fluid mb-2 py-5" *ngIf="skill">
+            <div class="row" class="col-sm-4 col-md-6 col-lg-12 mb-3">
+                <div>
+                    <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                        <div class="form-group mb-4 text-white">
+                            <label for="nombreE" class="mb-3">Ruta imgagén skill:</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="skill.nombre" required>                    
+                        </div>
+                        <div class="form-group mb-4 text-white">
+                            <label for="descripcionE" class="mb-3">Ingrese el Porcentaje:</label>                        
+                            <input type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="skill.porcentaje" required>
+                        </div>
+                        <button class="btn btn-dark">Editar Skill</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
