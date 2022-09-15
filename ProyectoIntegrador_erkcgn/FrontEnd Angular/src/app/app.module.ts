@@ -28,6 +28,9 @@ import { ProyectoService } from './service/proyecto.service';
 import { EducacionService } from './service/educacion.service';
 import { InterceptorService } from './service/interceptor-service';
 import { SExperienciaService } from './service/experiencia.service';
+import { EditSkillComponent } from './componentes/aptitudes/edit-skill.component';
+import { NewSkillComponent } from './componentes/aptitudes/new-skill.component';
+import { SkillService } from './service/skill.service';
 
 
 @NgModule({
@@ -48,6 +51,8 @@ import { SExperienciaService } from './service/experiencia.service';
     NewlogroComponent,
     EditlogroComponent,
     HomeRutasComponent,
+    EditSkillComponent,
+    NewSkillComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,6 +69,7 @@ import { SExperienciaService } from './service/experiencia.service';
     EducacionService, 
     InterceptorService,
     SExperienciaService,
+    SkillService,
     ],
   bootstrap: [AppComponent]
 })
