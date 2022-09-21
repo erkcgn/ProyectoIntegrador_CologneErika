@@ -62,7 +62,11 @@ public class CProyecto {
         }
         
         Proyecto proyecto = new Proyecto(
-                dtoproyecto.getNombreP(),dtoproyecto.getDescripcionP()
+                dtoproyecto.getNombreP(),
+                dtoproyecto.getDescripcionP(),
+                dtoproyecto.getImgP(),
+                dtoproyecto.getImgP2(),
+                dtoproyecto.getImgP3()
         );
         
         sProyecto.save(proyecto);
@@ -85,6 +89,9 @@ public class CProyecto {
         
         proyecto.setNombreP(dtoproyecto.getNombreP());
         proyecto.setDescripcionP(dtoproyecto.getDescripcionP());
+        proyecto.setImgP(dtoproyecto.getImgP());
+        proyecto.setImgP2(dtoproyecto.getImgP2());
+        proyecto.setImgP3(dtoproyecto.getImgP3());
         
         sProyecto.save(proyecto);
         return new ResponseEntity(new Mensaje("Proyecto actualizado"), HttpStatus.OK);

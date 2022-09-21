@@ -13,13 +13,19 @@ public class Proyecto {
     private int id;
     private String nombreP;
     private String descripcionP;
+    private String imgP;
+    private String imgP2;
+    private String imgP3;
 
     public Proyecto() {
     }
 
-    public Proyecto(String nombreP, String descripcionP) {
+    public Proyecto(String nombreP, String descripcionP, String imgP, String imgP2, String imgP3) {
         this.nombreP = nombreP;
         this.descripcionP = descripcionP;
+        this.imgP = imgP;
+        this.imgP2 = imgP2;
+        this.imgP3 = imgP3;
     }
 
     public int getId() {
@@ -44,6 +50,30 @@ public class Proyecto {
 
     public void setDescripcionP(String descripcionP) {
         this.descripcionP = descripcionP;
+    }
+
+    public String getImgP() {
+        return imgP;
+    }
+
+    public void setImgP(String imgP) {
+        this.imgP = imgP;
+    }
+
+    public String getImgP2() {
+        return imgP2;
+    }
+
+    public void setImgP2(String imgP2) {
+        this.imgP2 = imgP2;
+    }
+
+    public String getImgP3() {
+        return imgP3;
+    }
+
+    public void setImgP3(String imgP3) {
+        this.imgP3 = imgP3;
     }
     
     
