@@ -16,16 +16,18 @@ public class Persona {
     private String titulo;
     private String descripcion;
     private String imgPerfil;
+    private String imgBanner;
 
     public Persona() {
     }
 
-    public Persona(String nombre, String apellido, String titulo, String descripcion, String imgPerfil) {
+    public Persona(String nombre, String apellido, String titulo, String descripcion, String imgPerfil, String imgBanner) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.imgPerfil = imgPerfil;
+        this.imgBanner = imgBanner;
     }
 
     public int getId() {
@@ -76,7 +78,11 @@ public class Persona {
         this.imgPerfil = imgPerfil;
     }
 
-    
+    public String getImgBanner() {
+        return imgBanner;
+    }
 
-    
+    public void setImgBanner(String imgBanner) {
+        this.imgBanner = imgBanner;
+    }    
 }

@@ -65,7 +65,7 @@ public class PersonaController {
         if(sPersona.existsByNombre(dtopersona.getNombre())){
             return new ResponseEntity(new Mensaje("Este nombre ya existe"), HttpStatus.BAD_REQUEST);
         }
-        Persona persona = new Persona(dtopersona.getNombre(), dtopersona.getApellido(), dtopersona.getTitulo(), dtopersona.getDescripcion(), dtopersona.getImgPerfil());
+        Persona persona = new Persona(dtopersona.getNombre(), dtopersona.getApellido(), dtopersona.getTitulo(), dtopersona.getDescripcion(), dtopersona.getImgPerfil(), dtopersona.getImgBanner());
         sPersona.save(persona);
         return new ResponseEntity(new Mensaje("Persona creada"), HttpStatus.OK);
     }
@@ -90,14 +90,19 @@ public class PersonaController {
         persona.setTitulo(dtopersona.getTitulo());
         persona.setDescripcion(dtopersona.getDescripcion());
         persona.setImgPerfil(dtopersona.getImgPerfil());
+        persona.setImgBanner(dtopersona.getImgBanner());
         
         sPersona.save(persona);
-        return new ResponseEntity(new Mensaje("Persona actulizada"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Persona actualizada"), HttpStatus.OK);
     }
     
     @GetMapping("/traer/perfil")
     public Persona findPersona(int id) {
         return sPersona.findPersona((int)1);
     }
+    
+//    public Persona findPersona(int id) {
+//        return sPersona.findPersona((int)1);
+//    }
 
 }

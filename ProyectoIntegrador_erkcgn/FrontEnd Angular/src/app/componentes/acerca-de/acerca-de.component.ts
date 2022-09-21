@@ -10,7 +10,7 @@ import { TokenService } from 'src/app/service/token.service';
 })
 
 export class AcercaDeComponent implements OnInit {
-  public persona: Persona = new Persona("","","","","");
+  public persona: Persona = new Persona("","","","","","");
 
   constructor(public personaService: PersonaService,
               private tokenService: TokenService) { }
@@ -42,5 +42,7 @@ export class AcercaDeComponent implements OnInit {
       });
     }
   }
+
+  
 
 }

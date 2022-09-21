@@ -15,16 +15,19 @@ public class dtoPersona {
     private String descripcion;
     @NotBlank
     private String imgPerfil;
+    @NotBlank
+    private String imgBanner;
 
     public dtoPersona() {
     }
 
-    public dtoPersona(String nombre, String apellido, String titulo, String descripcion, String imgPerfil) {
+    public dtoPersona(String nombre, String apellido, String titulo, String descripcion, String imgPerfil, String imgBanner) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.imgPerfil = imgPerfil;
+        this.imgBanner = imgBanner;
     }
 
     public String getNombre() {
@@ -66,6 +69,13 @@ public class dtoPersona {
     public void setImgPerfil(String imgPerfil) {
         this.imgPerfil = imgPerfil;
     }
-    
+
+    public String getImgBanner() {
+        return imgBanner;
+    }
+
+    public void setImgBanner(String imgBanner) {
+        this.imgBanner = imgBanner;
+    }   
     
 }
