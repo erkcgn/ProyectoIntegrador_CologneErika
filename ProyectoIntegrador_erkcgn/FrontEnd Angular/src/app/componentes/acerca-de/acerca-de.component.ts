@@ -41,8 +41,6 @@ export class AcercaDeComponent implements OnInit {
         alert("No se pudo eliminar");
       });
     }
-  }
-
-  
+  } 
 
 }

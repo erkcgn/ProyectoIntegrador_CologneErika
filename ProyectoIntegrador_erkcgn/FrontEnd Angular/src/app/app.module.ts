@@ -31,6 +31,8 @@ import { SExperienciaService } from './service/experiencia.service';
 import { EditSkillComponent } from './componentes/aptitudes/edit-skill.component';
 import { NewSkillComponent } from './componentes/aptitudes/new-skill.component';
 import { SkillService } from './service/skill.service';
+import { NewAcercaDeComponent } from './componentes/acerca-de/new-acerca-de.component';
+import { EditAcercaDeComponent } from './componentes/acerca-de/edit-acerca-de.component';
 
 
 @NgModule({
@@ -53,6 +55,8 @@ import { SkillService } from './service/skill.service';
     HomeRutasComponent,
     EditSkillComponent,
     NewSkillComponent,
+    NewAcercaDeComponent,
+    EditAcercaDeComponent,
   ],
   imports: [
     BrowserModule,
