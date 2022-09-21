@@ -11,6 +11,9 @@ import { ProyectoService } from 'src/app/service/proyecto.service';
 export class NewlogroComponent implements OnInit {
   nombreP: string;
   descripcionP: string;
+  imgP: string;
+  imgP2: string;
+  imgP3: string;
 
   constructor(private proyectoS: ProyectoService,
               private router: Router) { }
@@ -20,7 +23,7 @@ export class NewlogroComponent implements OnInit {
 
 
   onCreate(): void {
-    const proyecto = new Proyecto(this.nombreP, this.descripcionP);
+    const proyecto = new Proyecto(this.nombreP, this.descripcionP, this.imgP, this.imgP2, this.imgP3);
     this.proyectoS.save(proyecto).subscribe(data => {
       alert("Proyecto añadido correctamente");
       this.router.navigate(['/']);
