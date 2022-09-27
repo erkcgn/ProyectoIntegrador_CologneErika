@@ -1,4 +1,56 @@
-<section class="container mb-5 py-5">
+<header class="py-2 bg-info text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>
+                    <i class="fas fa-user"></i> Crear Educación
+                </h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="py-4 mb-4 bg-danger bg-opacity-25">
+    <div class="container">
+        <div class="row">
+
+        </div>
+    </div>
+</section>
+
+<section class="py-2 mb-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card">
+                    <div class="card-header bg-danger bg-opacity-10">
+                        <h4>Completar Datos:</h4>
+                    </div>
+                    <div class="card-body">
+                        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                            <div class="form-group mb-3">
+                                <label for="nombreE">Nombre de la Institución</label>
+                                <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="nombreE" required>                    
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="descripcionE" class="mb-3">Descripción de Carrera/Curso</label>
+                                <textarea type="text" class="form-control" id="descripcionE" name="descripcionE" cols="20" rows="7"[(ngModel)]="descripcionE" required></textarea>                   
+                            </div>
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                                <input type="submit" value="Crear Educación" class="btn btn-primary btn-block">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- <section class="container mb-5 py-5">
     <div class="container-fluid bg-primary">
         <div class="container-fluid mb-2 py-5 ">
             <div class="row" class="col-sm-4 col-md-6 col-lg-12 mb-3">
@@ -18,4 +70,4 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->

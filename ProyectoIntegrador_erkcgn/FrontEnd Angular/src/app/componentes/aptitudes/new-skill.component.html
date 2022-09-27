@@ -1,21 +1,50 @@
-<section class="container mb-5 py-5">
-    <div class="container-fluid bg-primary">
-        <div class="container-fluid mb-2 py-5 ">
-            <div class="row" class="col-sm-4 col-md-6 col-lg-12 mb-3">
-                <div >
-                    <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-                        <div class="form-group mb-4 py-2 text-white">
-                            <label for="nombreE" class="mb-3">Nueva Skill - Ruta img:</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>                    
-                        </div>
-                        <div class="form-group mb-4 text-white">
-                            <label for="descripcionE" class="mb-3">Porcentaje:</label>
-                            <input type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="porcentaje" required>                
-                        </div>
-                        <button class="btn btn-dark">Agregar Skill</button>
-                    </form>
+<header class="py-2 bg-info text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>
+                    <i class="fas fa-user"></i> Crear Skill
+                </h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="py-4 mb-4 bg-warning bg-opacity-25">
+    <div class="container">
+        <div class="row">
+
+        </div>
+    </div>
+</section>
+
+<section class="py-4 mb-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card">
+                    <div class="card-header bg-warning bg-opacity-10">
+                        <h4>Completar Datos:</h4>
+                    </div>
+                    <div class="card-body">
+                        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                            <div class="form-group mb-4">
+                                <label for="nombre" class="mb-3">Ruta imgagén skill</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>                    
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="porcentaje" class="mb-3">Ingrese el Porcentaje</label>                        
+                                <input type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="porcentaje" required>
+                            </div>
+                            
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                                <input type="submit" value="Crear Skill" class="btn btn-primary btn-block">
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+

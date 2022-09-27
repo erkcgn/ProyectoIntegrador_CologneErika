@@ -1,31 +1,59 @@
-<section class="container mb-5 py-5">
-    <div class="container-fluid bg-primary">
-        <div class="container-fluid mb-2 py-5">
-            <div class="row" class="col-sm-4 col-md-6 col-lg-12 mb-3">
-                <div>
-                    <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-                        <div class="form-group mb-4 py-2 text-white">
-                            <label for="nombreP" class="mb-3">Nombre del Proyecto:</label>
-                            <input type="text" class="form-control" id="nombreP" name="nombreP" [(ngModel)]="nombreP" required>                    
-                        </div>
-                        <div class="form-group mb-4 text-white">
-                            <label for="descripcionP" class="mb-3">Descripcion del Proyecto:</label>
-                            <textarea type="text" class="form-control" id="descripcionP" name="descripcionP" [(ngModel)]="descripcionP" required></textarea>                   
-                        </div>
-                        <div class="form-group mb-4 text-white">
-                            <label for="imgP" class="mb-3">Ruta primer img del Proyecto:</label>
-                            <textarea type="text" class="form-control" id="imgP" name="imgP" [(ngModel)]="imgP" required></textarea>                   
-                        </div>
-                        <div class="form-group mb-4 text-white">
-                            <label for="imgP2" class="mb-3">Ruta segunda img del Proyecto:</label>
-                            <textarea type="text" class="form-control" id="imgP2" name="imgP2" [(ngModel)]="imgP2" required></textarea>                   
-                        </div>
-                        <div class="form-group mb-4 text-white">
-                            <label for="imgP3" class="mb-3">Ruta tercer img del Proyecto:</label>
-                            <textarea type="text" class="form-control" id="imgP3" name="imgP3" [(ngModel)]="imgP3" required></textarea>                   
-                        </div>                       
-                        <button class="btn btn-dark">Agregar Proyecto</button>
-                    </form>
+<header class="py-2 bg-info text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>
+                    <i class="fas fa-user"></i> Crear Proyecto
+                </h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="py-4 mb-4 bg-primary bg-opacity-25">
+    <div class="container">
+        <div class="row">
+
+        </div>
+    </div>
+</section>
+
+<section class="py-2 mb-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card">
+                    <div class="card-header bg-primary bg-opacity-10">
+                        <h4>Completar Datos:</h4>
+                    </div>
+                    <div class="card-body">
+                        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                            <div class="form-group mb-3">
+                                <label for="nombreP" class="mb-2">Nombre del Proyecto:</label>
+                                <input type="text" class="form-control" id="nombreP" name="nombreP" [(ngModel)]="nombreP" required>                    
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="descripcionP" class="mb-2">Descripcion del Proyecto:</label>
+                                <textarea type="text" class="form-control" id="descripcionP" name="descripcionP" cols="20" rows="5" [(ngModel)]="descripcionP" required></textarea>                   
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="imgP" class="mb-2">Ruta primer img del Proyecto:</label>
+                                <input type="text" class="form-control" id="imgP" name="imgP" [(ngModel)]="imgP" required>                  
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="imgP2" class="mb-2">Ruta segunda img del Proyecto:</label>
+                                <input type="text" class="form-control" id="imgP2" name="imgP2" [(ngModel)]="imgP2" required>                  
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="imgP3" class="mb-2">Ruta tercer img del Proyecto:</label>
+                                <input type="text" class="form-control" id="imgP3" name="imgP3" [(ngModel)]="imgP3" required>                  
+                            </div>          
+                            
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                                <input type="submit" value="Crear Proyecto" class="btn btn-primary btn-block">
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

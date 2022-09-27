@@ -1,42 +1,60 @@
 <!-- Section: Design Block -->
-<section class="container-fluid text-center text-lg-start mb-5 py-4">
-
-    <div class="card mb-3">
-        <div class="row g-0 d-flex align-items-center">
-            <div class="col-lg-4 d-none d-lg-flex">
-                <img src="../../../assets/img/erika.PNG" alt="img perfil"
-                    class="w-100 rounded rounded-tr-lg-0 rounded-bl-lg-5" />
+<header class="py-2 bg-info text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>
+                    <i class="fas fa-user"></i> Login
+                </h1>
             </div>
-            <div class="col-lg-8">
-                <div class="card-body py-5 px-md-5">
-                    <form  class="col-sm-12 col-md-6 col-lg-9" #f="ngForm"ngForm (ngSubmit)="onLogin()" novalidate>
+        </div>
+    </div>
+</header>
 
-                        <div class="form-outline mb-4">
-                            <input type="email" id="nombreUsuario" name="nombreUsuario" class="form-control" [(ngModel)]="nombreUsuario" required/>
-                            <label class="form-label" for="nombreUsuario">Email/Usuario</label>
-                        </div>
-                        <div class="form-outline mb-4">
-                            <input type="password" id="password" name="password" class="form-control" [(ngModel)]="password" required/>
-                            <label class="form-label" for="password">Password</label>
-                        </div>
-                        <div class="row mb-4">
-                            <div class="col d-flex justify-content-center">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="form2Example31"
-                                        checked />
-                                    <label class="form-check-label" for="form2Example31"> Recordarme </label>
+<section class="py-4 mb-4 bg-light">
+    <div class="container">
+        <div class="row">
+
+        </div>
+    </div>
+</section>
+
+<section class="py-4 mb-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Iniciar Sesión:</h4>
+                    </div>
+                    <div class="card-body">
+                        <form #f="ngForm" ngForm (ngSubmit)="onLogin()" novalidate>
+                            <div class="form-group mb-4">
+                                <label for="nombreUsuario">Nombre del Usuario</label>
+                                <input type="email" name="nombreUsuario" class="form-control"
+                                    [(ngModel)]="nombreUsuario" required />
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="password">Password</label>
+                                <input type="password" name="password" class="form-control" [(ngModel)]="password"
+                                    required />
+                            </div>
+                            <div class="row">
+                                <div class="col d-flex justify-content-center mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="form2Example31"
+                                            checked />
+                                        <label class="form-check-label" for="form2Example31">Recordarme</label>
+                                    </div>
                                 </div>
                             </div>
-
-                            <div class="col">
-                                <a href="#!">Olvido su contraseña?</a>
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                                <input type="submit" value="Ingresar" class="btn btn-primary btn-block">
                             </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block mb-4">Ingresar</button>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-

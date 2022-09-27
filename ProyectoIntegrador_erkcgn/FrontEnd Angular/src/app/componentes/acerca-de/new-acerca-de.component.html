@@ -1,35 +1,62 @@
-<section class="container mb-5 py-5">
-    <div class="container-fluid bg-primary">
-        <div class="container-fluid mb-2 py-5 ">
-            <div class="row" class="col-sm-4 col-md-6 col-lg-12 mb-3">
-                <div>
-                    <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-                        <div class="form-group mb-4 py-2 text-white">
-                            <label for="nombre" class="mb-3">Nombre:</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>                    
-                        </div>
-                        <div class="form-group mb-4 text-white">
-                            <label for="apellido" class="mb-3">Apellido:</label>
-                            <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="apellido" required>                
-                        </div>
-                        <div class="form-group mb-4 text-white">
-                            <label for="titulo" class="mb-3">Título:</label>
-                            <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="titulo" required>                
-                        </div>
-                        <div class="form-group mb-4 text-white">
-                            <label for="descripcion" class="mb-3">Descripcion:</label>
-                            <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="descripcion" required>                
-                        </div>
-                        <div class="form-group mb-4 text-white">
-                            <label for="imgPerfil" class="mb-3">Ruta img Perfil:</label>
-                            <input type="text" class="form-control" id="imgPerfil" name="imgPerfil" [(ngModel)]="imgPerfil" required>                
-                        </div>
-                        <div class="form-group mb-4 text-white">
-                            <label for="imgBanner" class="mb-3">Ruta img Banner:</label>
-                            <input type="text" class="form-control" id="imgBanner" name="imgBanner" [(ngModel)]="imgBanner" required>                
-                        </div>
-                        <button class="btn btn-dark">Agregar Persona</button>
-                    </form>
+<header class="py-2 bg-info text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>
+                    <i class="fas fa-user"></i> Persona
+                </h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="py-4 mb-4 bg-success bg-opacity-50">
+    <div class="container">
+        <div class="row">
+
+        </div>
+    </div>
+</section>
+
+<section class="mb-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card">
+                    <div class="card-header bg-success bg-opacity-10">
+                        <h4>Completar datos:</h4>
+                    </div>
+                    <div class="card-body">
+                        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                            <div class="form-group mb-2">
+                                <label for="nombre">Nombre:</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
+                            </div>
+                            <div class="form-group mb-2">
+                                <label for="apellido">Apellido:</label>
+                                <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="apellido" required>
+                            </div>
+                            <div class="form-group mb-2">
+                                <label for="titulo">Título:</label>
+                                <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="titulo" required>
+                            </div>
+                            <div class="form-group mb-2">
+                                <label for="descripcion">Descripción:</label>
+                                <textarea type="text" class="form-control" id="descripcion" name="descripcion" cols="20" rows="7" [(ngModel)]="descripcion" required></textarea>
+                            </div>
+                            <div class="form-group mb-2">
+                                <label for="imgPerfil">Ruta img Perfil:</label>
+                                <input type="text" class="form-control" id="imgPerfil" name="imgPerfil" [(ngModel)]="imgPerfil" required>
+                            </div>
+                            <div class="form-group mb-2">
+                                <label for="imgBanner">Ruta img Banner:</label>
+                                <input type="text" class="form-control" id="imgBanner" name="imgBanner" [(ngModel)]="imgBanner" required>
+                            </div>
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                                <input type="submit" value="Crear Persona" class="btn btn-primary btn-block">
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
