@@ -39,19 +39,19 @@
                                     <p class="text-light">
                                         {{Proyecto.descripcionP}}
                                     </p>
-                                    <div class="row">
-                                        <div class="col-sm-4 col-md-6 col-lg-4 py-2">
-                                            <img [src]="Proyecto.imgP" class="img-fluid mx-auto" width="400" height="400"
-                                                alt="imagen Proyecto">
-                                        </div>
-                                        <div class="col-sm-4 col-md-6 col-lg-4 py-2">
-                                            <img [src]="Proyecto.imgP2" class="img-fluid mx-auto" width="400" height="400"
-                                                alt="imagen Proyecto">
-                                        </div>
-                                        <div class="col-sm-4 col-md-6 col-lg-4 py-2">
-                                            <img [src]="Proyecto.imgP3" class="img-fluid mx-auto" width="400" height="400"
-                                                alt="imagen Proyecto">
-                                        </div>
+                                    <!-- Probando carrusel -->
+                                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">                                        
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img [src]="Proyecto.imgP" class="d-block w-100" alt="imagen Proyecto">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img [src]="Proyecto.imgP2" class="d-block w-100" alt="imagen Proyecto">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img [src]="Proyecto.imgP3" class="d-block w-100" alt="imagen Proyecto">
+                                            </div>
+                                        </div>                                      
                                     </div>
                                 </div>
                             </tr>
@@ -62,3 +62,18 @@
         </div>
     </div>
 </section>
+
+<!-- <div class="row">
+    <div class="col-sm-4 col-md-6 col-lg-4 py-2">
+        <img [src]="Proyecto.imgP" class="img-fluid mx-auto" width="400" height="400"
+            alt="imagen Proyecto">
+    </div>
+    <div class="col-sm-4 col-md-6 col-lg-4 py-2">
+        <img [src]="Proyecto.imgP2" class="img-fluid mx-auto" width="400" height="400"
+            alt="imagen Proyecto">
+    </div>
+    <div class="col-sm-4 col-md-6 col-lg-4 py-2">
+        <img [src]="Proyecto.imgP3" class="img-fluid mx-auto" width="400" height="400"
+            alt="imagen Proyecto">
+    </div>
+</div> -->
