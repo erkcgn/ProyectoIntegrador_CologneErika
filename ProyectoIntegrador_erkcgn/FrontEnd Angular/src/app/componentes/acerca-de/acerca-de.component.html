@@ -3,14 +3,12 @@
         <div class="row banner ">
             <img [src]="persona.imgBanner" alt="banner" class="banner-img">
         </div>
-        <div class="container-fluid row">
-            <div class="d-grid gap-2 d-md-flex justify-content-md-end" class="col-lg-4">
+        <div class="container-fluid row py-2" *ngIf="isLogged">            
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                 <button type="button" class="btn btn-dark btn-sm" routerLink="/newacercade"
                     *ngIf="isLogged">
                     Agregar Persona
                 </button>
-            </div>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                 <td *ngIf="isLogged">
                     <button class="btn btn-light" routerLink="/editacercade/{{persona.id}}">
                         <i class="fas fa-edit"></i>
@@ -26,13 +24,10 @@
     </section>
     <section class="container marketing mb-2 pt-2">
         <div class="row featurette">
-
             <div class="col-md-11">
                 <table>
-                    <tbody>
-                        
+                    <tbody>                        
                         <tr>
-
                             <td class="col-sm-4 col-md-6 col-lg-4">
                                 <div>
                                     <img [src]="persona.imgPerfil"
@@ -52,7 +47,6 @@
                                     {{persona.descripcion}}
                                 </p>
                             </td>
-
                         </tr>
                     </tbody>
                 </table>
