@@ -29,25 +29,33 @@
                     <div class="card-body" *ngIf="proyecto">
                         <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                             <div class="form-group mb-3">
-                                <label for="nombreP" class="mb-2">Nombre del Proyecto:</label>
+                                <label for="nombreP">Nombre del Proyecto</label>
                                 <input type="text" class="form-control" id="nombreP" name="nombreP" [(ngModel)]="proyecto.nombreP" required>                    
                             </div>
                             <div class="form-group mb-3">
-                                <label for="descripcionP" class="mb-2">Descripcion del Proyecto:</label>
+                                <label for="descripcionP">Descripcion del Proyecto</label>
                                 <textarea type="text" class="form-control" id="descripcionP" name="descripcionP" cols="20" rows="5" [(ngModel)]="proyecto.descripcionP" required></textarea>                   
                             </div>
                             <div class="form-group mb-3">
-                                <label for="imgP" class="mb-2">Ruta primer img del Proyecto:</label>
+                                <label for="imgP">Ruta primer img del Proyecto</label>
                                 <input type="text" class="form-control" id="imgP" name="imgP" [(ngModel)]="proyecto.imgP" required>                  
                             </div>
                             <div class="form-group mb-3">
-                                <label for="imgP2" class="mb-2">Ruta segunda img del Proyecto:</label>
+                                <label for="imgP2">Ruta segunda img del Proyecto</label>
                                 <input type="text" class="form-control" id="imgP2" name="imgP2" [(ngModel)]="proyecto.imgP2" required>                  
                             </div>
                             <div class="form-group mb-3">
-                                <label for="imgP3" class="mb-2">Ruta tercer img del Proyecto:</label>
+                                <label for="imgP3">Ruta tercer img del Proyecto</label>
                                 <input type="text" class="form-control" id="imgP3" name="imgP3" [(ngModel)]="proyecto.imgP3" required>                  
-                            </div>          
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="color">Color del contenedor en Hexadecimal</label>
+                                <input type="text" class="form-control" id="color" name="color" [(ngModel)]="proyecto.color" required>                  
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="opacity">Opacity del Proyecto</label>
+                                <input type="text" class="form-control" id="opacity" name="opacity" [(ngModel)]="proyecto.opacity" required>                  
+                            </div>       
                             
                             <div class="d-grid gap-2 col-6 mx-auto">
                                 <input type="submit" value="Editar Proyecto" class="btn btn-primary btn-block">

@@ -14,16 +14,22 @@ public class dtoProyecto {
     private String imgP2;
     @NotBlank
     private String imgP3;
+    @NotBlank
+    private String color;
+    @NotBlank
+    private String opacity;
 
     public dtoProyecto() {
     }
 
-    public dtoProyecto(String nombreP, String descripcionP, String imgP, String imgP2, String imgP3) {
+    public dtoProyecto(String nombreP, String descripcionP, String imgP, String imgP2, String imgP3, String color, String opacity) {
         this.nombreP = nombreP;
         this.descripcionP = descripcionP;
         this.imgP = imgP;
         this.imgP2 = imgP2;
         this.imgP3 = imgP3;
+        this.color = color;
+        this.opacity = opacity;
     }
 
     public String getNombreP() {
@@ -65,6 +71,24 @@ public class dtoProyecto {
     public void setImgP3(String imgP3) {
         this.imgP3 = imgP3;
     }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }    
+
+    public String getOpacity() {
+        return opacity;
+    }
+
+    public void setOpacity(String opacity) {
+        this.opacity = opacity;
+    }
+
+    
     
     
 }

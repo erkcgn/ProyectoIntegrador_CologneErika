@@ -14,12 +14,12 @@
                 </div>
             </div>
         </div>
-        <div class="container bg-primary bg-opacity-75">
+        <div class="container">
             <div class="row">
-                <div class="mb-4 text-center">
+                <div class="mb-2 text-center">
                     <table class="table">
                         <tbody>
-                            <tr *ngFor="let Proyecto of proyecto">
+                            <tr *ngFor="let Proyecto of proyecto" [style.background]="Proyecto.color" [style.opacity]="Proyecto.opacity">
 
                                 <div class="row">
                                     <div>
@@ -38,6 +38,7 @@
                                     </div>
                                     <p class="text-light">
                                         {{Proyecto.descripcionP}}
+                                                                                
                                     </p>
                                     <!-- Probando carrusel -->
                                     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">                                        

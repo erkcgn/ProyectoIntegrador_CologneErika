@@ -16,16 +16,20 @@ public class Proyecto {
     private String imgP;
     private String imgP2;
     private String imgP3;
+    private String color;
+    private String opacity;
 
     public Proyecto() {
     }
 
-    public Proyecto(String nombreP, String descripcionP, String imgP, String imgP2, String imgP3) {
+    public Proyecto(String nombreP, String descripcionP, String imgP, String imgP2, String imgP3,String color, String opacity) {
         this.nombreP = nombreP;
         this.descripcionP = descripcionP;
         this.imgP = imgP;
         this.imgP2 = imgP2;
         this.imgP3 = imgP3;
+        this.color = color;
+        this.opacity = opacity;
     }
 
     public int getId() {
@@ -75,6 +79,24 @@ public class Proyecto {
     public void setImgP3(String imgP3) {
         this.imgP3 = imgP3;
     }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }   
+
+    public String getOpacity() {
+        return opacity;
+    }
+
+    public void setOpacity(String opacity) {
+        this.opacity = opacity;
+    }
+
+    
     
     
 }
