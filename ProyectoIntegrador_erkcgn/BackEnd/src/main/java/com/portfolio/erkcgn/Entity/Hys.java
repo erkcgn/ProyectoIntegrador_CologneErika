@@ -12,14 +12,18 @@ public class Hys {
     private int id;
     private String nombre;
     private int porcentaje;
+    private String outerStrokeColor;
+    private String innerStrokeColor;
 
     public Hys() {
     }
 
-    public Hys(String nombre, int porcentaje) {
+    public Hys(String nombre, int porcentaje, String outerStrokeColor, String innerStrokeColor) {        
         this.nombre = nombre;
         this.porcentaje = porcentaje;
-    }
+        this.outerStrokeColor = outerStrokeColor;
+        this.innerStrokeColor = innerStrokeColor;
+    }    
 
     public int getId() {
         return id;
@@ -43,6 +47,22 @@ public class Hys {
 
     public void setPorcentaje(int porcentaje) {
         this.porcentaje = porcentaje;
+    }
+
+    public String getOuterStrokeColor() {
+        return outerStrokeColor;
+    }
+
+    public void setOuterStrokeColor(String outerStrokeColor) {
+        this.outerStrokeColor = outerStrokeColor;
+    }
+
+    public String getInnerStrokeColor() {
+        return innerStrokeColor;
+    }
+
+    public void setInnerStrokeColor(String innerStrokeColor) {
+        this.innerStrokeColor = innerStrokeColor;
     }
 
     
