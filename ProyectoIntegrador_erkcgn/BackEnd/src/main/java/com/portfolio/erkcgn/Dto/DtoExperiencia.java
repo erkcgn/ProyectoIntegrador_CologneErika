@@ -10,13 +10,19 @@ public class DtoExperiencia {
     private String nombreE;
     @NotBlank
     private String descripcionE;
+    @NotBlank
+    private String color;
+    @NotBlank
+    private String opacity;
 
     public DtoExperiencia() {
     }
 
-    public DtoExperiencia(String nombreE, String descripcionE) {
+    public DtoExperiencia(String nombreE, String descripcionE, String color, String opacity) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
+        this.color = color;
+        this.opacity = opacity;
     }
 
     public String getNombreE() {
@@ -34,8 +40,23 @@ public class DtoExperiencia {
     public void setDescripcionE(String descripcionE) {
         this.descripcionE = descripcionE;
     }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getOpacity() {
+        return opacity;
+    }
+
+    public void setOpacity(String opacity) {
+        this.opacity = opacity;
+    }
     
-    
-    
+       
     
 }
