@@ -28,3 +28,8 @@ body{
 .bd-callout-greenlight {
     border-left-color: rgb(126, 230, 105);
 }
+
+.div-fuente-titulos {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font: bold;
+  }
