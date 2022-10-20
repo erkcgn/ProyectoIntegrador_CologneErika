@@ -66,9 +66,8 @@ public class CProyecto {
                 dtoproyecto.getDescripcionP(),
                 dtoproyecto.getImgP(),
                 dtoproyecto.getImgP2(),
-                dtoproyecto.getImgP3(),
-                dtoproyecto.getColor(),
-                dtoproyecto.getOpacity()
+                dtoproyecto.getImgP3(),                
+                dtoproyecto.getLink()
         );
         
         sProyecto.save(proyecto);
@@ -93,9 +92,8 @@ public class CProyecto {
         proyecto.setDescripcionP(dtoproyecto.getDescripcionP());
         proyecto.setImgP(dtoproyecto.getImgP());
         proyecto.setImgP2(dtoproyecto.getImgP2());
-        proyecto.setImgP3(dtoproyecto.getImgP3());
-        proyecto.setColor(dtoproyecto.getColor());
-        proyecto.setOpacity(dtoproyecto.getOpacity());
+        proyecto.setImgP3(dtoproyecto.getImgP3());        
+        proyecto.setLink(dtoproyecto.getLink());
         
         sProyecto.save(proyecto);
         return new ResponseEntity(new Mensaje("Proyecto actualizado"), HttpStatus.OK);
