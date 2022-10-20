@@ -11,41 +11,42 @@
             </div>
         </div>
     </section>
-
-    <div class="row">
-        <div class="text-center col-sm-12 col-md-6 col-lg-4" *ngFor="let skill of skill">
-            <circle-progress 
-                [percent]="(skill.porcentaje)" 
-                [radius]="100" 
-                [imageSrc]="(skill.nombre)" 
-                [showImage]="true" 
-                [imageHeight]="70" 
-                [imageWidth]="70" 
-                [showUnits]="false"
-                [showTitle]="false"
-                [titleColor]="'#212F3C'"
-                [titleColor]="'blue'"
-                [titleFontSize]="'2emF'" 
-                [showSubtitle]="false" 
-                [outerStrokeWidth]="14" 
-                [innerStrokeWidth]="7"
-                [outerStrokeColor]="(skill.outerStrokeColor)" 
-                [innerStrokeColor]="(skill.innerStrokeColor)" 
-                [animation]="true"
-                [animationDuration]="500">
-            </circle-progress>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <td *ngIf="isLogged">
-                    <button class="btn" routerLink="/editskill/{{skill.id}}">
-                        <i class="fas fa-edit"></i>
-                    </button>
-                </td>
-                <td *ngIf="isLogged">
-                    <button class="btn" (click)="eliminar(skill.id)">
-                        <i class="fas fa-trash"></i>
-                    </button>
-                </td>
-            </div>
-        </div>        
-    </div>
+    <section class="container py-2 px-5">
+        <div class="columnas-grid">
+            <div class="text-center" *ngFor="let skill of skill">
+                <circle-progress 
+                    [percent]="(skill.porcentaje)" 
+                    [radius]="100" 
+                    [imageSrc]="(skill.nombre)" 
+                    [showImage]="true" 
+                    [imageHeight]="60" 
+                    [imageWidth]="50" 
+                    [showUnits]="false"
+                    [showTitle]="false"
+                    [titleColor]="'#212F3C'"
+                    [titleColor]="'blue'"
+                    [titleFontSize]="'2emF'" 
+                    [showSubtitle]="false" 
+                    [outerStrokeWidth]="14" 
+                    [innerStrokeWidth]="7"
+                    [outerStrokeColor]="(skill.outerStrokeColor)" 
+                    [innerStrokeColor]="(skill.innerStrokeColor)" 
+                    [animation]="true"
+                    [animationDuration]="500">
+                </circle-progress>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <td *ngIf="isLogged">
+                        <button class="btn" routerLink="/editskill/{{skill.id}}">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                    </td>
+                    <td *ngIf="isLogged">
+                        <button class="btn" (click)="eliminar(skill.id)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </div>
+            </div>        
+        </div>
+    </section>    
 </section>
