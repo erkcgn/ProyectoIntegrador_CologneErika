@@ -1,80 +1,124 @@
-<section class="container-fluid bg-success bg-opacity-50 py-2">
-    <div>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4 col-md-6 col-lg-8">
-                    <h2>
-                        Proyectos realizados
-                    </h2>
-                </div>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end" class="col-lg-4">
-                    <button type="button" class="btn btn-dark btn-sm" routerLink="/newlogro" *ngIf="isLogged">
-                        Agregar Proyecto
-                    </button>
-                </div>
+<section class="container-fluid section-bg-proyecto py-2">
+    <section class="container py-1">
+        <div class="row">
+            <div class="col-sm-4 col-md-6 col-lg-8 div-fuente-titulos">
+                <h2>
+                    Proyectos realizados
+                </h2>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end" class="col-lg-4">
+                <button type="button" class="btn btn-dark btn-sm" routerLink="/newlogro" *ngIf="isLogged">
+                    Agregar Proyecto
+                </button>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="mb-2 text-center">
-                    <table class="table">
-                        <tbody>
-                            <tr *ngFor="let Proyecto of proyecto" [style.background]="Proyecto.color" [style.opacity]="Proyecto.opacity">
+    </section>
+    <section class="container py-2 px-5">
+        <div>
+            <table>
+                <tbody class="container-flex mb-3">
+                    <tr *ngFor="let Proyecto of proyecto" class="flex-item">
+                        <!-- aqui comenzo la prueba grid -->
+                        <div class="container div-proyectos">
+                            <div>
+                                <div>
+                                    <h3 class="text-center py-2">
+                                        {{Proyecto.nombreP}}
+                                    </h3>
 
-                                <div class="row">
-                                    <div>
-                                        <h3 class="text-center text-light py-2">
-                                            {{Proyecto.nombreP}}
-                                        </h3>
-                                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                            <button *ngIf="isLogged" class="btn"
-                                                routerLink="/editlogro/{{Proyecto.id}}">
+                                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                        <td *ngIf="isLogged">
+                                            <button class="btn" routerLink="/editlogro/{{Proyecto.id}}">
                                                 <i class="fas fa-edit"></i>
                                             </button>
-                                            <button *ngIf="isLogged" class="btn" (click)="borrar(Proyecto.id)">
+                                        </td>
+                                        <td *ngIf="isLogged">
+                                            <button class="btn" (click)="borrar(Proyecto.id)">
                                                 <i class="fas fa-trash"></i>
                                             </button>
-                                        </div>
+                                        </td>
                                     </div>
-                                    <p class="text-light">
-                                        {{Proyecto.descripcionP}}
-                                                                                
-                                    </p>
+                                    <div>
+                                        <td>
+                                            <p class="">
+                                                {{Proyecto.descripcionP}}
+                                            </p>
+                                            <p>
+                                                <a [href]="Proyecto.opacity" target="_blank">Visitar
+                                                    Site</a>
+                                            </p>
+                                        </td>
+                                    </div>
                                     <!-- Probando carrusel -->
-                                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">                                        
-                                        <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <img [src]="Proyecto.imgP" class="d-block w-100" alt="imagen Proyecto">
+                                    <div class="container-fluid mb-3">
+                                        <div class="carousel slide" data-bs-ride="carousel">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img [src]="Proyecto.imgP" class="d-block w-100 rounded" alt="imagen1 Proyecto">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img [src]="Proyecto.imgP2" class="d-block w-100 rounded" alt="imagen2 Proyecto">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img [src]="Proyecto.imgP3" class="d-block w-100 rounded" alt="imagen3 Proyecto">
+                                                </div>
                                             </div>
-                                            <div class="carousel-item">
-                                                <img [src]="Proyecto.imgP2" class="d-block w-100" alt="imagen Proyecto">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img [src]="Proyecto.imgP3" class="d-block w-100" alt="imagen Proyecto">
-                                            </div>
-                                        </div>                                      
-                                    </div>
-                                </div>
-                            </tr>
-                        </tbody>
-                    </table>
+                                        </div>
+                                    </div>                                    
+                                </div>                               
+                            </div>
+                        </div>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</section>
+
+<!-- <div class="container col-md-6 mb-3">
+    <div class="row">
+        <td>
+            <h3 class="text-center text-light py-2">
+                {{Proyecto.nombreP}}
+            </h3>
+        </td>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <td *ngIf="isLogged">
+                <button class="btn" routerLink="/editlogro/{{Proyecto.id}}">
+                    <i class="fas fa-edit"></i>
+                </button>
+            </td>
+            <td *ngIf="isLogged">
+                <button class="btn" (click)="borrar(Proyecto.id)">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </td>
+        </div>
+        <div>
+            <td>
+                <p class="text-light">
+                    {{Proyecto.descripcionP}}                                            
+                </p>
+                <p >
+                    <a [href]="Proyecto.opacity" target="_blank" class="text-light">Visitar Site:</a>
+                </p>                                                                                
+            </td>
+        </div>
+    </div> -->
+<!-- Probando carrusel
+    <div class="row">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img [src]="Proyecto.imgP" class="d-block w-100" alt="imagen Proyecto">
+                </div>
+                <div class="carousel-item">
+                    <img [src]="Proyecto.imgP2" class="d-block w-100" alt="imagen Proyecto">
+                </div>
+                <div class="carousel-item">
+                    <img [src]="Proyecto.imgP3" class="d-block w-100" alt="imagen Proyecto">
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- <div class="row">
-    <div class="col-sm-4 col-md-6 col-lg-4 py-2">
-        <img [src]="Proyecto.imgP" class="img-fluid mx-auto" width="400" height="400"
-            alt="imagen Proyecto">
-    </div>
-    <div class="col-sm-4 col-md-6 col-lg-4 py-2">
-        <img [src]="Proyecto.imgP2" class="img-fluid mx-auto" width="400" height="400"
-            alt="imagen Proyecto">
-    </div>
-    <div class="col-sm-4 col-md-6 col-lg-4 py-2">
-        <img [src]="Proyecto.imgP3" class="img-fluid mx-auto" width="400" height="400"
-            alt="imagen Proyecto">
-    </div>
+    </div>                            
 </div> -->
