@@ -1,22 +1,20 @@
 
-/** grid proyectos**/
+/** flex proyectos**/
 
- @media (min-width: 768px) {
-   .container-flex {
-      display: flex;
-      flex-flow: row wrap;
-      gap: 2rem;
-      align-items: center;    
-    }
-        
-    .flex-item {
-      width: 30%;
-      height: 100%;
-      min-width: 250px;
-      flex-grow: 1;
-      ;
-    }   
- }
+ .container-flex {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2rem;
+  align-items: center;    
+}
+    
+.flex-item {
+  width: 30%;
+  height: 100%;
+  min-width: 250px;
+  flex-grow: 1;
+  
+} 
 
 /** estilos proyectos**/
   .div-proyectos {
