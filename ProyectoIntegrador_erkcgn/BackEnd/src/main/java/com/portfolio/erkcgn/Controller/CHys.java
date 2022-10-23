@@ -43,13 +43,13 @@ public class CHys {
     
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody DtoHys dtohys){
-        if(StringUtils.isBlank(dtohys.getNombre())){
+        if(StringUtils.isBlank(dtohys.getImagen())){
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
         }
-        if(sHys.existsByNombre(dtohys.getNombre())){
+        if(sHys.existsByNombre(dtohys.getImagen())){
             return new ResponseEntity(new Mensaje("Esa Skill existe"), HttpStatus.BAD_REQUEST);
         }
-        Hys hys = new Hys(dtohys.getNombre(),dtohys.getPorcentaje(), dtohys.getOuterStrokeColor(), dtohys.getInnerStrokeColor());
+        Hys hys = new Hys(dtohys.getImagen(),dtohys.getPorcentaje(), dtohys.getOuterStrokeColor(), dtohys.getInnerStrokeColor());
         sHys.save(hys);
         
         return new ResponseEntity(new Mensaje("Skill agregada"), HttpStatus.OK);
@@ -60,15 +60,15 @@ public class CHys {
         if(!sHys.existsById(id)){
             return new ResponseEntity(new Mensaje("El ID no existe"), HttpStatus.BAD_REQUEST);
         }
-        if(sHys.existsByNombre(dtohys.getNombre()) && sHys.getByNombre(dtohys.getNombre()).get().getId() != id){
+        if(sHys.existsByNombre(dtohys.getImagen()) && sHys.getByNombre(dtohys.getImagen()).get().getId() != id){
             return new ResponseEntity(new Mensaje("Este Skill ya existe"), HttpStatus.BAD_REQUEST);
         }
-        if(StringUtils.isBlank(dtohys.getNombre())){
+        if(StringUtils.isBlank(dtohys.getImagen())){
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
         }
         
         Hys hys = sHys.getOne(id).get();
-        hys.setNombre(dtohys.getNombre());
+        hys.setImagen(dtohys.getImagen());
         hys.setPorcentaje((dtohys.getPorcentaje()));
         hys.setOuterStrokeColor(dtohys.getOuterStrokeColor());
         hys.setInnerStrokeColor(dtohys.getInnerStrokeColor());

@@ -9,7 +9,7 @@ import { SkillService } from 'src/app/service/skill.service';
   styleUrls: ['./new-skill.component.css']
 })
 export class NewSkillComponent implements OnInit {
-  nombre: string;
+  imagen: string;
   porcentaje: number;
   outerStrokeColor: string;
   innerStrokeColor: string;
@@ -21,7 +21,7 @@ export class NewSkillComponent implements OnInit {
   }
 
   onCreate(): void {
-    const skill = new Skill(this.nombre, this.porcentaje,this.outerStrokeColor, this.innerStrokeColor);
+    const skill = new Skill(this.imagen, this.porcentaje,this.outerStrokeColor, this.innerStrokeColor);
     this.skillS.save(skill).subscribe((skill: Skill) => {
       alert("Skill creada correctamente");
       this.router.navigate(['/']);

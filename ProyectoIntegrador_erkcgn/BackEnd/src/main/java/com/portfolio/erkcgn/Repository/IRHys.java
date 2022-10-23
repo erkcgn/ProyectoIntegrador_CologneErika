@@ -5,6 +5,6 @@ import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface IRHys extends JpaRepository<Hys, Integer>{
-    Optional<Hys> findByNombre(String name);
-    public boolean existsByNombre(String name);
+    Optional<Hys> findByImagen(String imagen);
+    public boolean existsByImagen(String imagen);
 }

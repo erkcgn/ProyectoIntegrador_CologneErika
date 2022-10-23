@@ -1,12 +1,12 @@
 export class Skill {
     id: number;
-    nombre: string;
+    imagen: string;
     porcentaje: number;
     outerStrokeColor: string;
     innerStrokeColor: string;
 
-    constructor(nombre: string, porcentaje: number, outerStrokeColor: string, innerStrokeColor: string) {
-        this.nombre = nombre;
+    constructor(imagen: string, porcentaje: number, outerStrokeColor: string, innerStrokeColor: string) {
+        this.imagen = imagen;
         this.porcentaje = porcentaje;
         this.outerStrokeColor = outerStrokeColor;
         this.innerStrokeColor = innerStrokeColor;

@@ -5,7 +5,7 @@ import javax.validation.constraints.NotBlank;
 public class DtoHys {
     
     @NotBlank
-    private String nombre;
+    private String imagen;
     @NotBlank
     private int porcentaje;
     @NotBlank
@@ -16,20 +16,20 @@ public class DtoHys {
     public DtoHys() {
     }
 
-    public DtoHys(String nombre, int porcentaje, String outerStrokeColor, String innerStrokeColor) {
-        this.nombre = nombre;
+    public DtoHys(String imagen, int porcentaje, String outerStrokeColor, String innerStrokeColor) {
+        this.imagen = imagen;
         this.porcentaje = porcentaje;
         this.outerStrokeColor = outerStrokeColor;
         this.innerStrokeColor = innerStrokeColor;
     }    
 
-    public String getNombre() {
-        return nombre;
+    public String getImagen() {
+        return imagen;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
+    }   
 
     public int getPorcentaje() {
         return porcentaje;

@@ -22,8 +22,8 @@ public class SHys {
         return rHys.findById(id);
     }
     
-    public Optional<Hys> getByNombre(String nombre){
-        return rHys.findByNombre(nombre);
+    public Optional<Hys> getByNombre(String imagen){
+        return rHys.findByImagen(imagen);
     }
     
     public void save(Hys skill){
@@ -39,6 +39,6 @@ public class SHys {
     }
     
     public boolean existsByNombre(String nombre){
-        return rHys.existsByNombre(nombre);
+        return rHys.existsByImagen(nombre);
     }
 }

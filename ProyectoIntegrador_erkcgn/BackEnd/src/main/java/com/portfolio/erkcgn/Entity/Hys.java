@@ -10,7 +10,7 @@ public class Hys {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String nombre;
+    private String imagen;
     private int porcentaje;
     private String outerStrokeColor;
     private String innerStrokeColor;
@@ -18,8 +18,8 @@ public class Hys {
     public Hys() {
     }
 
-    public Hys(String nombre, int porcentaje, String outerStrokeColor, String innerStrokeColor) {        
-        this.nombre = nombre;
+    public Hys(String imagen, int porcentaje, String outerStrokeColor, String innerStrokeColor) {        
+        this.imagen = imagen;
         this.porcentaje = porcentaje;
         this.outerStrokeColor = outerStrokeColor;
         this.innerStrokeColor = innerStrokeColor;
@@ -33,13 +33,13 @@ public class Hys {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getImagen() {
+        return imagen;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
+    }   
 
     public int getPorcentaje() {
         return porcentaje;
