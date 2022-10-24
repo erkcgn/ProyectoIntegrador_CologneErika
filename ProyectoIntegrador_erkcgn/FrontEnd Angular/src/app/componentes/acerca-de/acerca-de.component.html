@@ -1,12 +1,11 @@
-<main>    
+<main>
     <section>
         <div class="row banner ">
             <img [src]="persona.imgBanner" alt="banner" class="banner-img">
         </div>
-        <div class="container-fluid row py-2" *ngIf="isLogged">            
+        <div class="container-fluid row py-2" *ngIf="isLogged">
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button type="button" class="btn btn-dark btn-sm" routerLink="/newacercade"
-                    *ngIf="isLogged">
+                <button type="button" class="btn btn-dark btn-sm" routerLink="/newacercade" *ngIf="isLogged">
                     Agregar Persona
                 </button>
                 <td *ngIf="isLogged">
@@ -24,32 +23,30 @@
     </section>
     <section class="container marketing mb-2 pt-2">
         <div class="row featurette">
-            <div class="col-md-11">
-                <table>
-                    <tbody>                        
-                        <tr>
-                            <td class="col-sm-4 col-md-6 col-lg-4">
-                                <div>
-                                    <img [src]="persona.imgPerfil"
-                                        class="rounded-circle bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-                                        width="250" height="250" alt="">
-                                </div>
-                            </td>
-                            <td class="col-sm-4 col-md-6 col-lg-8">
-                                <h1 class="featurette-heading div-fuente-titulos">
-                                    {{persona.nombre}} {{persona.apellido}}
-                                    <br>
-                                    <span class="text-muted">
-                                        {{persona.titulo}}
-                                    </span>
-                                </h1>
-                                <p class="lead">
-                                    {{persona.descripcion}}
-                                </p>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="card" style="border:none">
+                <!-- probando otro contenedor -->
+                <div class="row g-0">
+                    <div class="col-md-4 text-center">
+                        <img [src]="persona.imgPerfil"
+                            class="rounded-circle bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                            width="250" height="250" alt="imgPerfil">
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h1 class="featurette-heading div-fuente-titulos">
+                                {{persona.nombre}} {{persona.apellido}}
+                                <br>
+                                <span class="text-muted">
+                                    {{persona.titulo}}
+                                </span>
+                            </h1>
+                            <p class="lead">
+                                {{persona.descripcion}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
